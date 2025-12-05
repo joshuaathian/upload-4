@@ -32,3 +32,19 @@ document.getElementById("search").addEventListener("input", function () {
       }
     });
   });
+  document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.getElementById('nav-menu');
+  
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('active');
+  });
+  
+  // Close menu when clicking links
+  links.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      links.classList.remove('active');
+    });
+  });
+});
+

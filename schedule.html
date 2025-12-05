@@ -156,6 +156,7 @@ tr.today {
       </div>
 
       <nav class="main-nav">
+         <button class="nav-toggle" aria-label="toggle navigation">☰</button>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
            <li><a href="schedule.html" class="active" aria-current="page">Schedule</a></li>
@@ -165,8 +166,6 @@ tr.today {
           
         </ul>
       </nav>
-
-      <button class="nav-toggle" aria-label="toggle navigation">☰</button>
     </div>
   </header>
   <section class="hero">
@@ -275,6 +274,17 @@ document.querySelector(".nav-toggle").addEventListener("click", function () {
       entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); } });
     }, { threshold: 0.1 });
     sections.forEach(section => observer.observe(section));
+
   </script>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  
+  toggle.addEventListener('click', function() {
+    links.classList.toggle('active');
+  });
+});
+</script>
 </body>
 </html>

@@ -325,8 +325,6 @@ Our classes are designed to help members of all fitness levels improve strength,
     });
   });
 </script>
-
-</script>
   </main>
 <br>
   <footer class="footer">
@@ -334,5 +332,15 @@ Our classes are designed to help members of all fitness levels improve strength,
       <p>&copy; 2025 MoveWithUs Sports Club - All rights reserved</p>
     </div>
   </footer>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  
+  toggle.addEventListener('click', function() {
+    links.classList.toggle('active');
+  });
+});
+</script>
 </body>
 </html>

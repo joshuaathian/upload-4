@@ -150,6 +150,7 @@
       </div>
 
       <nav class="main-nav">
+        <button class="nav-toggle" aria-label="toggle navigation">☰</button>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="schedule.html">Schedule</a></li>
@@ -159,8 +160,6 @@
           
         </ul>
       </nav>
-
-      <button class="nav-toggle" aria-label="toggle navigation">☰</button>
     </div>
   </header>
 
@@ -229,5 +228,15 @@
       <p>&copy; 2025 MoveWithUs Sports Club - All rights reserved</p>
     </div>
   </footer>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  
+  toggle.addEventListener('click', function() {
+    links.classList.toggle('active');
+  });
+});
+</script>
 </body>
 </html>
